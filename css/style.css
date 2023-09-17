@@ -137,7 +137,8 @@ section {
 }
 
 .home-content p {
-    max-width: 40rem;
+    text-align: justify;
+    max-width: 42rem;
     font-size: 1.3rem;
 }
 
@@ -262,8 +263,8 @@ section {
 .home-img img {
     position: absolute;
     bottom: 0;
-    right: -10px;
-    height: 100%;
+    right: 2rem;
+    max-width: 35vw;
     pointer-events: none;
 }
 
@@ -301,6 +302,7 @@ span {
 }
 
 .about-content p {
+    text-align: justify;
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
@@ -325,7 +327,9 @@ span {
     gap: 2rem;
 }
 
-.services-container .services-box {
+.services-container .services-box-backend,
+.services-container .services-box-webdev,
+.services-container .services-box-gd {
     flex: 1 1 30rem;
     background: var(--bg-color);
     padding: 3rem 2rem 4rem;
@@ -337,31 +341,33 @@ span {
     transition: .5s ease;
 }
 
-.services-container .services-box:hover {
+.services-container .services-box-backend:hover,
+.services-container .services-box-webdev:hover,
+.services-container .services-box-gd:hover {
     box-shadow: 0 .1rem 2rem var(--shadow-color);
     transform: scale(1.05);
 }
 
-.services-box:hover .flipcard {
+.services-box-backend:hover .flipcard,.services-box-webdev:hover .flipcard,.services-box-gd:hover .flipcard {
     transform: rotateY(180deg);
 }
 
-.services-box i {
+.services-box-backend i,.services-box-webdev i,.services-box-gd i {
     font-size: 7rem;
     color: var(--main-color);
 }
 
-.services-box h3 {
+.services-box-backend h3,.services-box-webdev h3,.services-box-gd h3 {
     font-size: 2.6rem;
     transition: .5s;
 }
 
-.services-box p {
+.services-box-backend p, .services-box-webdev p,.services-box-gd p {
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
 }
 
-.services-box {
+.services-box-backend, .services-box-webdev, .services-box-gd {
     perspective: 1000px;
 }
 
@@ -374,7 +380,9 @@ span {
     transform-style: preserve-3d;
 }
 
-.services-box:hover .flipcard-container {
+.services-box-backend:hover .flipcard-container, 
+.services-box-webdev:hover .flipcard-container, 
+.services-box-gd:hover .flipcard-container {
     transform: rotateY(180deg);
 }
 

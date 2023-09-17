@@ -1,7 +1,7 @@
 const maincolor = "#754ef9";
 const textcolor = "#333";
 
-function setupCircleProgress() {
+function backend() {
     let options = {
         startAngle: -1.55,
         size: 100,
@@ -26,11 +26,80 @@ function setupCircleProgress() {
     });
 }
 
-$(".services-box").hover(
+$(".services-box-backend").hover(
     function () {
-        setupCircleProgress();
+        backend();
     },
     function () {
+        
+    }
+);
+
+function webdev() {
+    let options = {
+        startAngle: -1.55,
+        size: 100,
+        value: 0.85,
+        fill: maincolor
+    }
+    $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+        function (event, progress, stepValue) {
+            $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+        });
+    $(".css .bar").circleProgress({
+        value: 0.80
+    })
+    $(".html .bar").circleProgress({
+        value: 0.85
+    });
+    $(".react .bar").circleProgress({
+        value: 0.70
+    });
+    $(".vue .bar").circleProgress({
+        value: 0.85
+    });
+}
+
+$(".services-box-webdev").hover(
+    function () {
+        webdev();
+    },
+    function () {
+        
+    }
+);
+
+function gd() {
+    let options = {
+        startAngle: -1.55,
+        size: 100,
+        value: 0.85,
+        fill: maincolor
+    }
+    $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+        function (event, progress, stepValue) {
+            $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+        });
+    $(".css .bar").circleProgress({
+        value: 0.80
+    })
+    $(".html .bar").circleProgress({
+        value: 0.85
+    });
+    $(".react .bar").circleProgress({
+        value: 0.70
+    });
+    $(".vue .bar").circleProgress({
+        value: 0.85
+    });
+}
+
+$(".services-box-gd").hover(
+    function () {
+        gd();
+    },
+    function () {
+        
     }
 );
 
