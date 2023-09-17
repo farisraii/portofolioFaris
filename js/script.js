@@ -80,16 +80,16 @@ function gd() {
         function (event, progress, stepValue) {
             $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
         });
-    $(".css .bar").circleProgress({
-        value: 0.80
-    })
-    $(".html .bar").circleProgress({
-        value: 0.85
-    });
-    $(".react .bar").circleProgress({
+    $(".corel .bar").circleProgress({
         value: 0.70
+    })
+    $(".figma .bar").circleProgress({
+        value: 0.80
     });
-    $(".vue .bar").circleProgress({
+    $(".ps .bar").circleProgress({
+        value: 0.80
+    });
+    $(".ai .bar").circleProgress({
         value: 0.85
     });
 }
