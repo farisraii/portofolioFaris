@@ -11,6 +11,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Menghilangkan tombol panah di seluruh browser */
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Menghilangkan tombol panah pada browser berbasis WebKit seperti Chrome */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
 
 :root {
     --bg-color: #fdfdfd;
@@ -18,12 +30,6 @@
     --main-color: #754ef9;
     --white-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, .2);
-
-    --center: {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 }
 
 html {
@@ -680,7 +686,7 @@ span {
     width: 100%;
     padding: 1.5rem;
     font-size: 1rem;
-    columns: var(--text-color);
+    color: var(--text-color);
     background: var(--bg-color);
     border-radius: .8rem;
     margin: .7rem 0;
