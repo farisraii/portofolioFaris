@@ -176,7 +176,7 @@ darkModeIcon.onclick = () => {
 
 ScrollReveal({
     // reset: true,
-    distance : '80px',
+    distance: '80px',
     duration: 2000,
     delay: 200
 });
@@ -184,4 +184,32 @@ ScrollReveal({
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, .certification.wrapper, .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img img', { origin: 'left' });
-ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' });
+ScrollReveal().reveal('.home-content h3, .home-content p, .about-content, .about-container .btn', { origin: 'right' });
+
+// about layer button
+
+
+let aboutLayer = document.querySelector('.about-layer');
+let aboutContent = document.querySelector('.about-content');
+let aboutImg = document.querySelector('.about-img');
+
+function toggleAboutLayer() {
+
+    
+
+    aboutLayer.style.opacity = '1';
+    aboutContent.style.display = 'none';
+    aboutImg.style.display = 'none';
+    aboutLayer.style.zIndex = '1';
+
+    // Jalankan ScrollReveal saat tombol diklik
+
+}
+
+function exitAboutLayer() {
+    aboutLayer.style.opacity = '0';
+    aboutContent.style.display = '';
+    aboutImg.style.display = '';
+    aboutLayer.style.zIndex = '-1';
+
+}

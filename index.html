@@ -72,21 +72,41 @@
 
     <!-- about section -->
     <section class="about" id="about">
-        <div class="about-img">
+        <div id="about-img" class="about-img">
             <img src="images/about.png" alt="">
         </div>
-        <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
-            <h3>Hi, I'm Here To Help Your Next Project!</h3>
-            <p>
-                My expertise extends to a diverse range of programming languages, including Java, PHP, Python, and Go.
-                However, my true passion lies in backend development, where I excel in server deployment, API
-                development, and database management. My commitment to honing my technical skills and problem-solving
-                abilities has been a driving force throughout my academic journey. I am enthusiastic about embarking on
-                a career as a backend developer, with a particular focus on server management, performance optimization,
-                and the creation of robust APIs. My dedication to continuous learning ensures that I remain at the
-                forefront of this dynamic field.</p>
-            <a href="#" class="btn">Read More</a>
+        <div class="about-container">
+            <div id="about-content" class="about-content">
+                <h2 class="heading">About <span>Me</span></h2>
+                <h3>Hi, I'm Here To Help Your Next Project!</h3>
+                <p>
+                    My expertise extends to a diverse range of programming languages, including Java, PHP, Python, and
+                    Go.
+                    However, my true passion lies in backend development, where I excel in server deployment, API
+                    development, and database management. My commitment to honing my technical skills and
+                    problem-solving
+                    abilities has been a driving force throughout my academic journey. I am enthusiastic about embarking
+                    on
+                    a career as a backend developer, with a particular focus on server management, performance
+                    optimization,
+                    and the creation of robust APIs. My dedication to continuous learning ensures that I remain at the
+                    forefront of this dynamic field.</p>
+                    <a id="about-btn" href="#about" class="btn" onclick="toggleAboutLayer()">Read More</a>
+                
+            </div>
+            <div class="about-layer">
+                <div onclick="exitAboutLayer()" class="exit-icon"><i class='bx bx-x'></i></div>
+                <h3>Hi, I'm Here To Help Your Next Project!</h3>
+                <p>
+                    My expertise extends to a diverse range of programming languages, including Java, PHP, Python, and Go.
+                    However, my true passion lies in backend development, where I excel in server deployment, API
+                    development, and database management. My commitment to honing my technical skills and problem-solving
+                    abilities has been a driving force throughout my academic journey. I am enthusiastic about embarking on
+                    a career as a backend developer, with a particular focus on server management, performance optimization,
+                    and the creation of robust APIs. My dedication to continuous learning ensures that I remain at the
+                    forefront of this dynamic field.</p>
+            </div>
+            
         </div>
     </section>
 
@@ -345,7 +365,7 @@
         </h2>
         <form name="contact" method="POST" data-netlify="true">
             <div class="input-box">
-                <input type="text" placeholder="Full Name" name ="name">
+                <input type="text" placeholder="Full Name" name="name">
                 <input type="email" placeholder="Email Address" name="email">
             </div>
             <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>

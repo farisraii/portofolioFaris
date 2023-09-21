@@ -61,6 +61,11 @@ body {
     transition: .5s;
 }
 
+.heading {
+    font-size: 4.5rem;
+    text-align: center;
+}
+
 .header.sticky {
     background-color: var(--bg-color);
     box-shadow: 0 .1rem 1rem var(--shadow-color);
@@ -310,36 +315,63 @@ span {
 }
 
 .about {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.about-img img {
+
+.about-container .about-img img {
     width: 40vw;
     position: relative;
     bottom: 50px;
 }
 
-.heading {
-    font-size: 4.5rem;
-    text-align: center;
-}
-
-.about-content h2 {
+.about-container .about-content h2 {
     text-align: left;
     line-height: 1.2;
 }
 
-.about-content h3 {
+.about-container .about-content h3 {
     font-size: 2rem;
 }
 
-.about-content p {
+.about-container .about-content p {
     text-align: left;
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+}
+
+.about-container .about-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: var(--main-color);
+    color: var(--white-color);
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: -1;
+}
+
+.about-layer .exit-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 10rem;
+    padding-right: 5rem;
+    font-size: 3rem;
+    color: var(--white-color);
+    cursor: pointer;
 }
 
 
@@ -591,11 +623,11 @@ span {
 }
 
 .portfolio-layer h4 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .portfolio-layer p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin: .3rem 0 1rem;
 }
 
@@ -613,6 +645,8 @@ span {
     font-size: 1.5rem;
     color: #333;
 }
+
+/* certification section */
 
 .certification-container {
     display: flex;
@@ -745,7 +779,7 @@ span {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 2rem 7%;
+    padding: 1rem 7%;
     background: var(--main-color);
 }
 
@@ -758,7 +792,7 @@ span {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: .8rem;
+    padding: .5rem;
     background: var(--white-color);
     border-radius: .8rem;
     border: .2rem solid var(--main-color);
@@ -776,6 +810,44 @@ span {
 }
 
 /* BREAKPOINTS */
+
+@media (min-height: 768px) {
+    .home .profession-container .overlay {
+        border-top: calc(100vh/2) solid var(--main-color);
+        border-right: calc(100vh/2) solid var(--main-color);
+        border-bottom: calc(100vh/2) solid var(--main-color);
+        border-left: calc(100vh/2) solid transparent;
+        z-index: 100;
+    }
+
+    .home .profession-container .profession-box {
+        height: 100%;
+        right: 15rem;
+        z-index: 100;
+    }
+
+    .home .profession-container {
+        height: 100vh;
+        width: 1080px;
+    }
+
+    .about-img img {
+        bottom: 50%;
+    }
+
+    .services {
+        padding: 15rem 15%;
+    }
+
+    .contact {
+        padding-top: 20rem;
+    }
+
+    .portfolio {
+        padding: 15rem 30rem;
+    }
+}
+
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
@@ -883,7 +955,7 @@ span {
         font-size: 2.6rem;
         color: var(--text-color);
         margin-bottom: .1rem;
-    }
+    }z
 
     .navbar {
         position: absolute;
