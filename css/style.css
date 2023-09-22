@@ -1016,15 +1016,15 @@ span {
         height: 100%;
     }
 
-    .portfolio-box .portfolio-layer p{
-        font-size:1rem;
+    .portfolio-box .portfolio-layer p {
+        font-size: 1rem;
     }
 
-    .portfolio-box .portfolio-layer h4{
-        font-size:1.5rem;
+    .portfolio-box .portfolio-layer h4 {
+        font-size: 1.5rem;
     }
 
-    .portfolio-layer a i{
+    .portfolio-layer a i {
         font-size: 1rem;
     }
 
@@ -1053,10 +1053,17 @@ span {
 
 @media (max-width: 767px) {
 
-    html, body, .header{
+    html,
+    body {
         width: 100vw;
         overflow-x: hidden;
     }
+
+    .header {
+        background-color: var(--bg-color);
+        box-shadow: 0 .1rem 1rem var(--shadow-color);
+    }
+    
 
     #menu-icon {
         display: block;
@@ -1107,7 +1114,7 @@ span {
     }
 
     .home {
-        padding: 0 3% 23rem;
+        padding: 5rem 3% 23rem;
         justify-content: center;
         text-align: center;
     }
@@ -1136,7 +1143,7 @@ span {
 
     .home .profession-container .profession-box {
         position: fixed;
-        top: 61%;
+        top: 65%;
         left: 0;
         border-radius: 0;
         width: 100%;
@@ -1246,7 +1253,7 @@ span {
     }
 
     .home {
-        padding: 0 3% 30rem;
+        padding: 4rem 3% 30rem;
     }
 
     .home .profession-box .profession:nth-child(1) i {
@@ -1292,7 +1299,20 @@ span {
     .footer p {
         text-align: center;
         margin-top: 2rem;
-        font-size: 1.2rem;
+        font-size: 1.2grem;
     }
 
+}
+
+@media (max-width: 330px) {
+
+    .home-content h1{
+        font-size: 4rem;
+    }
+    .home .profession-container .overlay{
+        top: 75rem;
+    }
+    .home .profession-container .profession-box{
+        top: 65%;
+    }
 }
