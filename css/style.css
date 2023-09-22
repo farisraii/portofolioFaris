@@ -1288,14 +1288,11 @@ span {
         width: 90vw;
     }
 
-    .footer {
-        flex-direction: column-reverse;
-    }
 
     .footer p {
         text-align: center;
         margin-top: 2rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
 }
