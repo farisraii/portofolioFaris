@@ -351,26 +351,71 @@ span {
     height: 100%;
     display: flex;
     background: var(--main-color);
-    color: var(--white-color);
-    font-size: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 15rem;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 0 4rem;
+    padding: 4rem 15rem;
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity .5s;
     z-index: -1;
+}
+
+.about-layer h2 {
+    padding: 2rem 0;
+    font-size: 3rem;
+    color: var(--bg-color);
+}
+
+.about-layer h4{
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 3rem;
+}
+
+.about-layer p{
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 10rem;
+}
+
+.about-layer .education-content,
+.about-layer .interest-content {
+    padding: 10rem 5rem;
+    background: var(--bg-color);
+    text-align: center;
+    border-bottom: .8rem solid var(--main-color);
+    border-top: .8rem solid var(--main-color);
+    border-radius: 2rem;
+    box-shadow: 0 .2rem 2rem var(--shadow-color);
+    height: 60rem;
+}
+
+.about-layer .education-content img,
+.about-layer .interest-content img {
+    max-width: 50%;
+    margin-bottom: 1rem;
+    border: .2rem solid var(--main-color);
+    transition: .5s ;
+}
+
+.about-layer .education-content img:hover,
+.about-layer .interest-content img:hover{
+    scale: 150%;
 }
 
 .about-layer .exit-icon {
     position: absolute;
     top: 0;
     right: 0;
-    padding-top: 10rem;
-    padding-right: 5rem;
+    padding-top: 9rem;
+    padding-right: 3rem;
     font-size: 3rem;
-    color: var(--white-color);
+    color: var(--bg-color);
     cursor: pointer;
 }
 
@@ -955,9 +1000,9 @@ span {
         font-size: 2.6rem;
         color: var(--text-color);
         margin-bottom: .1rem;
-    }z
+    }
 
-    .navbar {
+    z .navbar {
         position: absolute;
         top: 100%;
         left: 0;
