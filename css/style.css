@@ -1053,9 +1053,9 @@ span {
 
 @media (max-width: 767px) {
 
-    html .header{
+    html, body, .header{
         width: 100vw;
-        overflow-x: hidden !important;
+        overflow-x: hidden;
     }
 
     #menu-icon {
