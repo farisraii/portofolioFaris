@@ -374,7 +374,7 @@ span {
 .about-layer h4{
     font-size: 2rem;
     margin-top: 0;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .about-layer p{
@@ -395,12 +395,41 @@ span {
     height: 60rem;
 }
 
-.about-layer .education-content img,
-.about-layer .interest-content img {
+.about-layer .education-content img {
     max-width: 50%;
     margin-bottom: 1rem;
     border: .2rem solid var(--main-color);
     transition: .5s ;
+}
+
+.about-layer .interest-content img {
+    max-width: 30%;
+    border: .2rem solid var(--main-color);
+    transition: .5s ;   
+}
+
+.about-layer .interest-content h4{
+    font-size: 2rem;
+    line-height: 0;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+
+.interest-content p {
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 2rem 0 1rem;
+}
+
+.about-layer .interest-content {
+    padding: 1rem 5rem;
+    background: var(--bg-color);
+    text-align: center;
+    border-bottom: .8rem solid var(--main-color);
+    border-top: .8rem solid var(--main-color);
+    border-radius: 2rem;
+    box-shadow: 0 .2rem 2rem var(--shadow-color);
+    height: 60rem;
 }
 
 .about-layer .education-content img:hover,
@@ -651,7 +680,7 @@ span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    background: linear-gradient(rgba(0, 0, 0, .7), var(--main-color));
     color: var(--white-color);
     display: flex;
     justify-content: center;
@@ -672,7 +701,7 @@ span {
 }
 
 .portfolio-layer p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: .3rem 0 1rem;
 }
 
