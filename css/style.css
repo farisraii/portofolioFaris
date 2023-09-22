@@ -32,16 +32,19 @@ input[type="number"]::-webkit-outer-spin-button {
     --shadow-color: rgba(0, 0, 0, .2);
 }
 
+html {
+    max-width: 100%;
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
 .dark-mode {
     --bg-color: #0b061f;
     --text-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, .7);
 }
 
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
+
 
 body {
     background: var(--bg-color);
@@ -314,6 +317,7 @@ span {
     color: var(--main-color);
 }
 
+
 .about {
     position: relative;
     display: flex;
@@ -371,13 +375,13 @@ span {
     color: var(--bg-color);
 }
 
-.about-layer h4{
+.about-layer h4 {
     font-size: 2rem;
     margin-top: 0;
     margin-bottom: 2rem;
 }
 
-.about-layer p{
+.about-layer p {
     font-size: 1.5rem;
     margin-top: 0;
     margin-bottom: 10rem;
@@ -399,16 +403,16 @@ span {
     max-width: 50%;
     margin-bottom: 1rem;
     border: .2rem solid var(--main-color);
-    transition: .5s ;
+    transition: .5s;
 }
 
 .about-layer .interest-content img {
     max-width: 30%;
     border: .2rem solid var(--main-color);
-    transition: .5s ;   
+    transition: .5s;
 }
 
-.about-layer .interest-content h4{
+.about-layer .interest-content h4 {
     font-size: 2rem;
     line-height: 0;
     margin-bottom: 2rem;
@@ -433,7 +437,7 @@ span {
 }
 
 .about-layer .education-content img:hover,
-.about-layer .interest-content img:hover{
+.about-layer .interest-content img:hover {
     scale: 150%;
 }
 
@@ -1005,12 +1009,39 @@ span {
 
     .services,
     .portfolio {
-        padding-bottom: 7rem;
+        padding: 7rem 5rem;
+    }
+
+    .portfolio-box {
+        height: 100%;
+    }
+
+    .portfolio-box .portfolio-layer p{
+        font-size:1rem;
+    }
+
+    .portfolio-box .portfolio-layer h4{
+        font-size:1.5rem;
+    }
+
+    .portfolio-layer a i{
+        font-size: 1rem;
+    }
+
+    .portfolio-layer a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        background: var(--white-color);
+        border-radius: 50%;
     }
 
     .contact {
         min-height: auto;
-        padding-bottom: 7rem;
+        padding-bottom: 5rem;
+        padding-top: 2rem;
     }
 
     .footer {
@@ -1018,7 +1049,15 @@ span {
     }
 }
 
+
+
 @media (max-width: 767px) {
+
+    html .header{
+        width: 100vw;
+        overflow-x: hidden !important;
+    }
+
     #menu-icon {
         display: block;
     }
@@ -1031,7 +1070,7 @@ span {
         margin-bottom: .1rem;
     }
 
-    z .navbar {
+    .navbar {
         position: absolute;
         top: 100%;
         left: 0;
@@ -1143,7 +1182,6 @@ span {
 
     .home .profession-container .overlay {
         position: fixed;
-
         top: 70rem;
         left: 50%;
         right: 0;
@@ -1156,7 +1194,11 @@ span {
         text-align: center;
     }
 
-    .about-content h2 {
+    .about-container .about-content h2 {
+        text-align: center;
+    }
+
+    .about-container .about-content p {
         text-align: center;
     }
 
